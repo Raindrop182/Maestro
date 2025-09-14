@@ -198,7 +198,7 @@ def draw_menu(display, w, h):
             display[y_offset:y_offset+logo_resized.shape[0], x_offset:x_offset+logo_resized.shape[1]] = logo_resized
     else:
         # Fallback title text if no logo
-        title = "Theremin Gesture Player"
+        title = "Maestro"
         title_size = cv2.getTextSize(title, cv2.FONT_HERSHEY_SIMPLEX, 1.5, 3)[0]
         title_x = (w - title_size[0]) // 2
         cv2.putText(display, title, (title_x, 100), cv2.FONT_HERSHEY_SIMPLEX, 1.5, (255, 255, 255), 3)
@@ -821,7 +821,7 @@ def draw_menu(display, w, h):
         else:
             display[y_offset:y_offset+logo_resized.shape[0], x_offset:x_offset+logo_resized.shape[1]] = logo_resized
     else:
-        title = "Theremin Gesture Player"
+        title = "Maestro"
         title_size = cv2.getTextSize(title, cv2.FONT_HERSHEY_SIMPLEX, 1.5, 3)[0]
         title_x = (w - title_size[0]) // 2
         cv2.putText(display, title, (title_x, 100), cv2.FONT_HERSHEY_SIMPLEX, 1.5, (255, 255, 255), 3)
@@ -1079,7 +1079,7 @@ def mouse_callback(event, x, y, flags, param):
 cv2.namedWindow("Maestro")
 cv2.setMouseCallback("Maestro", mouse_callback)
 
-print("Theremin Gesture Player Ready!")
+print("Maestro Ready!")
 print("Navigate through the menu to start playing!")
 
 # Load initial sounds
@@ -1450,7 +1450,7 @@ while True:
         cv2.putText(display, f"Loop State: {LOOP_STATE.state}", (10, h-90), 
                    cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 1)
 
-    cv2.imshow("Theremin Gesture Player", display)
+    cv2.imshow("Maestro", display)
     
     key = cv2.waitKey(1) & 0xFF
     if key == 27:  # ESC
