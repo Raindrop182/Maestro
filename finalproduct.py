@@ -19,7 +19,7 @@ def get_window_size():
     return int(sw * 0.8), int(sh * 0.8)
 
 w, h = get_window_size()
-window_name = "Theremin Gesture Player"
+window_name = "Maestro"
 cv2.namedWindow(window_name, cv2.WINDOW_NORMAL)
 cv2.resizeWindow(window_name, w, h)
 
@@ -1467,4 +1467,5 @@ while True:
 # Cleanup
 pygame.mixer.quit()
 cap.release()
+
 cv2.destroyAllWindows() 
